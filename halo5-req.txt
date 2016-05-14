@@ -2,7 +2,7 @@
 // @name        Halo 5 Auto-REQ
 // @namespace   https://github.com/wormania
 // @include     https://www.halowaypoint.com/*/games/halo-5-guardians/xbox-one/requisitions/categories/*?ownedOnly=False
-// @version     0.94a
+// @version     0.95
 // @grant       none
 // ==/UserScript==
 
