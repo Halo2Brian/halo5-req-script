@@ -1,6 +1,6 @@
 # Halo 5 REQ Script
 
-Script that collates your acquired Halo 5 REQ data from the Halo Waypoint website, formatted for pasting in to the [Halo 5 REQ Tracker Spreadsheet](https://docs.google.com/spreadsheets/d/1fiI-65mJWDKIt5pGIfkrwxbjBc32BVHKqdnuqydLZPI)
+Script that collates your acquired Halo 5 REQ data from the Halo Waypoint website, formatted for pasting in to the [Halo 5 REQ Tracker Spreadsheet](https://docs.google.com/spreadsheets/d/1fGYe1NGqG7ZXPfV3WPPW1agDMt5aY5UfElJOG2wQMIM/)
 
 ## Installation
 
