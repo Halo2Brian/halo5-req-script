@@ -82,7 +82,7 @@ for (i = 0; i < x.length; i++) {
   }
   //Armours and Helmets of the same set have identical names, this gives us a way to distinguish between them
   //Emblems also share names with non-Emblem items
-  if (x[i].dataset.subcategory === "Helmet" || x[i].dataset.subcategory === "ArmorSuit" || x[i].dataset.subcategory === "Emblem") {
+  if (x[i].dataset.subcategory === "Helmet" || x[i].dataset.subcategory === "ArmorSuit" || x[i].dataset.subcategory === "Emblem" || x[i].dataset.subcategory === "Stance") {
   str1 = str1.concat(x[i].dataset.subcategory.toLowerCase())
   }
   str1 = str1.concat("\t")
