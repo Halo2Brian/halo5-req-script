@@ -9,7 +9,7 @@
 //Don't run script if you are not logged in
 if (document.body.textContent.indexOf("Enter your credentials to view this data") > -1 ) {
   throw new Error("Not Logged in.");
-}
+} 
 
 var x = document.querySelectorAll('[data-name]');
 var str1 = "";
