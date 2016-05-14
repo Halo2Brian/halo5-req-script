@@ -32,7 +32,7 @@ for (i = 0; i < x.length; i++) {
   if (x[i].dataset.name === "Halo 2 Battle Rifle"){
   str1 = str1.concat("Battle RifleHalo 2 Battle Rifle\tX\t")
   continue
-  }
+  } 
   //First two words of the description give the "proper" name of the weapon for AR/BR
   weaponName = x[i].dataset.description.split(" ")[0] + " " + x[i].dataset.description.split(" ")[1]
   //Words 4 + 5 give the type of sight used
