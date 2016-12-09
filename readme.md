@@ -28,7 +28,7 @@ Open the [Raw script .txt](https://raw.githubusercontent.com/Halo2Brian/halo5-re
 Navigate to the next Requisition page, and with the console selected you can push Up and then Enter to repeat the previous script.
 
 ## History
-0.96 Improved handling for Gunfighter and Tactical Magnum
+0.96 Improved handling for Gunfighter and Tactical Magnum   
 0.95 Fork for handling of Vengeance Stance and Weapon Skin  
 0.94a: Improved handling for Halo 2 Battle Rifle  
 0.94: Updated spreadsheet for "Infinity's Armory" content, add fix for the blank-card waypoint bug  
