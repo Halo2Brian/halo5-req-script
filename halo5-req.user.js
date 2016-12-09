@@ -32,7 +32,7 @@ for (i = 0; i < x.length; i++) {
   if (x[i].dataset.name === "Halo 2 Battle Rifle"){
   str1 = str1.concat("Battle RifleHalo 2 Battle Rifle\tX\t")
   continue
-  } 
+  }
   //First two words of the description give the "proper" name of the weapon for AR/BR
   weaponName = x[i].dataset.description.split(" ")[0] + " " + x[i].dataset.description.split(" ")[1]
   //Words 4 + 5 give the type of sight used
@@ -52,8 +52,8 @@ for (i = 0; i < x.length; i++) {
   }
   str1 = str1.concat(weaponName + sightName + attachmentName)
   str1 = str1.concat("\tX\t")
-  //For DMR/SMG/Magnum you only need the first word for the name
-  } else if (x[i].dataset.name.split(" ").slice(-1)[0] in {"DMR":"","Magnum":"","SMG":"",}) {
+  //For DMR/SMG you only need the first word for the name
+  } else if (x[i].dataset.name.split(" ").slice(-1)[0] in {"DMR":"","SMG":"",}) {
   weaponName = x[i].dataset.description.split(" ")[0]
   //Words 3 + 4 give the type of sight used
   sightName = x[i].dataset.description.split(" ")[2] + " " + x[i].dataset.description.split(" ")[3]
@@ -72,7 +72,38 @@ for (i = 0; i < x.length; i++) {
   }
   str1 = str1.concat(weaponName + sightName + attachmentName)
   str1 = str1.concat("\tX\t")
+  } 
+  //For some Magnum you only need the first word for the name others need editing
+  else if (x[i].dataset.name.split(" ").slice(-1)[0] in {"Magnum":""}) {
+  //weaponName = x[i].dataset.description.split(" ")[0]
+    
+  //Formats gunfighter and tactical magnum to be like other loadout weapons  
+  if (x[i].dataset.name === "Gunfighter Magnum" || x[i].dataset.name === "Tactical Magnum"){
+  sightName = ("Projection Sight")
+  attachmentName = ", " + x[i].dataset.name
+  }
+  else {
+  //Words 3 + 4 give the type of sight used
+  sightName = x[i].dataset.description.split(" ")[2] + " " + x[i].dataset.description.split(" ")[3]
+  //Weapons without an attachment have a period after the sight, these can skip over the attachment check
+  if (sightName.slice(-1) === "."){
+  sightName = sightName.replace("\.", "")
+  attachmentName = ""
   } else {
+  //Silencer is the only single-word attachment
+  if (x[i].dataset.description.indexOf("Silencer") > -1){
+  attachmentName = ", Silencer"
+  } else {
+  //The rest of the attachments are words 6 + 7
+  attachmentName = ", " + x[i].dataset.description.split(" ")[5] + " " + x[i].dataset.description.split(" ")[6].replace("\.", "")
+  }
+  }
+  }
+  str1 = str1.concat("Magnum" + sightName + attachmentName)
+  str1 = str1.concat("\tX\t")
+  }  
+  
+  else {
   //For most other REQs just the name attribute is enough to distinguish it
   str1 = str1.concat(x[i].dataset.name.trim().toLowerCase());
   str1 = str1.concat("\tX")
